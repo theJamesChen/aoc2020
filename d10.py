@@ -7,7 +7,7 @@ splitdata = data.split('\n')
 splitdata = [int(i) for i in splitdata]
 
 splitdata = [0] + splitdata
-splitdata.append(max(splitdata)+3)
+splitdata += [max(splitdata)+3]
 splitdata.sort()
 
 countones = sum(1 for i in range(1,len(splitdata)) if splitdata[i] - splitdata[i-1] == 3)
